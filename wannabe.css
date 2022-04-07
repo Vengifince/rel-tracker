@@ -1,0 +1,263 @@
+
+.wannabecontainer {
+ margin: 10px auto; 
+ height: auto;
+ width: auto;
+}
+
+.wannabetabs {
+ margin: 0px auto;
+ position: relative;
+ width: 500px; 
+ height:  580px;
+ background: #dddddd;
+ border: 1px solid #ccc;
+ border-radius: 10px;
+}
+
+.wannabetab {
+ float: left; /* CHANGE TO DISPLAY:BLOCK FOR VERTICAL TABS */
+}
+
+/* position your tab labels in wannabe - also use margins to space your labels - you kind of have to eye until it's centered bc the math with tabs gets confusing */
+.wannabetab label {
+ display: block; /* this lets you fix the label dimensions */
+ padding: 12px;
+      height: 30px;
+      width: 106px;
+ background: #2b2b2b;
+ margin: 6px;
+ position: relative;
+ left: 39px;
+ top: 143px;
+ z-index: 5;
+ text-align: center;
+ font-size: 45px;
+ font-family: 'Purple Purse', cursive;
+transition: height .45s ease-in-out;
+ color: #f7f7f7;
+}
+
+.wannabetab input[type=radio]:checked ~ label {
+
+color: #fff;
+height: 40px;
+  background: linear-gradient(rgba(var(--main)), rgba(var(--accent)));
+}
+
+.wannabetab i{font-size: 30px;
+padding-top: 10px;}
+
+.wannabetab input[type=radio] {
+ display: none; /* DON'T EDIT */
+}
+
+    .wannabetab-triangle {
+      
+      position: absolute;
+      top: 149px;
+      left: 75px;
+      border-left: 35px solid transparent;
+      border-right: 35px solid transparent;
+      border-top: 18px solid #fefefe;
+      z-index: 6;
+    }
+
+ 
+/* if you want tab transitions they go wannabe */
+.wannabecontent {
+ position: absolute;
+ top: 105px;
+ bottom: 0px;
+ left: 15px;
+ right: 0px;
+ background: #f7f7f7;
+ padding: 20px;
+ border: 1px solid #ccc;
+ border-radius: 10px;
+ width: 429px;
+ height: 419px; 
+  opacity: 0;
+  transition: opacity .8s cubic-bezier(.42, 0, .34, 1.01);
+}
+
+/* if you want tab transitions they also go wannabe */
+.wannabetab input[type=radio]:checked ~ label ~ .wannabecontent {
+ z-index: 1;
+  opacity: 1;
+}
+
+
+.wannabeinner
+
+{position: absolute;
+top: 44px;
+right: 0px;
+background: #ededed;
+border: 1px solid #ccc;
+border-radius: 0px 0px 10px 10px;
+width: 427px;
+height: 353px;
+padding: 20px;
+padding-top: 40px;
+  overflow-y: auto;
+  overflow-x: hidden;
+   transform:translate(0,0); /* Block fixed position from scrolling*/
+}
+
+.wannabeheader
+
+{position: absolute;
+top: 15px;
+left: 15px;
+  background: #ededed;
+  width: 460px;
+  height: 100px;
+  z-index: 2;
+  border: 1px solid #ccc;
+  font-size: 35px;
+font-family: 'Raleway', sans-serif;
+padding: 5px;
+color: #515151;
+}
+
+.wannabeheader b
+
+{color: rgba(var(--accent));}
+
+.wannabeheader img
+{border: 5px solid rgba(var(--main));
+  width: 80px;
+  height: 80px;
+  margin-left: 10px;
+  margin-top: 10px;
+  border-radius: 90px;
+  z-index: 3;
+  outline: solid 1px;
+  outline-color: white;
+}
+
+.wannabedesc {
+  position: absolute;
+  top: 34px;
+  left: 16px;
+  background: #ededed;
+  height: 50px;
+  width: 330px;
+  margin-top: 22px;
+  z-index: 3;
+  text-align: justify;
+  font-size: 13px;
+  padding: 15px;
+  font-weight: 500;
+  font-family: 'Raleway', sans-serif;
+}
+
+.wannabebar {
+  position: absolute;
+  top: 126px;
+  width: 459px;
+  height: 12px;
+  background: #fefefe;
+  z-index: 4;
+  left: 15px;
+  padding: 5px;
+}
+
+.wannabe-imageback
+{width: 110px;
+  height: 110px;
+  background-color: rgba(var(--main),0.4);
+  margin-left: 355px;
+  position: absolute;
+  margin-top: -5px;
+  outline: solid 1px;
+  outline-color: white;
+  outline-offset: -5px;
+  
+}
+
+.wannabeinner span
+{position: relative;
+  
+   display: inline-block;
+  color: #545454;
+background: #f2f2f2;
+  padding: 20px;
+  border-radius: 6px;
+  border-right: 2px solid #ddd;
+  border-bottom: 2px solid #ddd;
+  line-height: 12px;
+  font-size: 12px;
+  height: 50px;
+  width: 300px;
+  overflow: auto;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 10px;
+  padding-left: 90px;
+  padding-top: 10px;
+}
+
+.wannabeinner span img
+{position: fixed;
+  border-radius: 6px;
+  margin-left: -90px;
+margin-top: -10px;
+z-index: 5;}
+
+.wannabeinner span p
+
+{margin-left: 20px;}
+
+.wannabeinner span b
+{color: rgba(var(--main))}
+
+.wannabeinner span i
+
+{font-size: 10px;
+position: relative;
+    text-decoration: none;
+     background: linear-gradient(130deg, rgba(var(--main), 0.5) 41.07%, rgba(var(--accent), 0.5) 76.05%);
+  background-position: 0 100%;
+  background-size: 100% 2px;
+  padding-bottom: 2px;
+  background-repeat: repeat-x;}
+
+.wannabeinner h1
+{font-family: 'Raleway', sans-serif;
+ font- weight: 300;
+  text-align: center;
+margin-bottom: 10px;
+  background: -webkit-linear-gradient(rgba(var(--accent)), rgba(var(--main)));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;}
+/* width */
+
+.wannabeinner::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.wannabeinner::-webkit-scrollbar-track {
+  background: rgba(var(--main));
+}
+
+/* Handle */
+.wannabeinner::-webkit-scrollbar-thumb {
+  background: rgba(var(--accent));
+}
+
+.wannabeinner span::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+.wannabeinner span::-webkit-scrollbar-track {
+  background: rgba(var(--main));
+}
+
+/* Handle */
+.wannabeinner span::-webkit-scrollbar-thumb {
+  background: rgba(var(--accent));
+}
